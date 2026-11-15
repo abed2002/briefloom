@@ -1,0 +1,155 @@
+    :root {
+      --bg-ivory: #F7F5EF;
+      --bg-card: #FAF9F5;
+      --forest: #183D35;
+      --ink: #171A18;
+      --sage: #A7B7A5;
+      --burnt: #D97952;
+      --hairline: rgba(23, 26, 24, 0.12);
+      --hairline-strong: rgba(23, 26, 24, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-ivory);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .font-editorial {
+      font-family: 'Instrument Serif', Georgia, serif;
+      letter-spacing: -0.015em;
+    }
+
+    /* Architectural Swiss Grid Pattern */
+    .swiss-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(23, 26, 24, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(23, 26, 24, 0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .hairline-border {
+      border-color: var(--hairline);
+    }
+
+    .loom-card {
+      background: #FAF9F5;
+      border: 1px solid rgba(23, 26, 24, 0.13);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+    }
+
+    .loom-card:hover {
+      border-color: rgba(24, 61, 53, 0.35);
+      box-shadow: 0 12px 30px -10px rgba(23, 26, 24, 0.07);
+    }
+
+    .loom-input {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(23, 26, 24, 0.18);
+      color: #171A18;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .loom-input:focus {
+      outline: none;
+      border-color: #183D35;
+      box-shadow: 0 0 0 3px rgba(24, 61, 53, 0.14);
+    }
+
+    .btn-primary {
+      background-color: #183D35;
+      color: #F7F5EF;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover {
+      background-color: #215046;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px -6px rgba(24, 61, 53, 0.35);
+    }
+
+    .btn-secondary {
+      background-color: #FAF9F5;
+      color: #171A18;
+      border: 1px solid rgba(23, 26, 24, 0.22);
+      transition: all 0.18s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #EFECE3;
+      border-color: #171A18;
+    }
+
+    .btn-burnt {
+      background-color: #D97952;
+      color: #FFFFFF;
+      transition: all 0.18s ease;
+    }
+
+    .btn-burnt:hover {
+      background-color: #C46842;
+      transform: translateY(-1px);
+    }
+
+    /* Connected block node connector line */
+    .node-connector {
+      position: relative;
+    }
+    .node-connector::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      width: 24px;
+      height: 1px;
+      background: #A7B7A5;
+    }
+
+    /* Accessible Focus Visible */
+    :focus-visible {
+      outline: 2px solid #183D35;
+      outline-offset: 2px;
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Dedicated Print Stylesheet for Polished Client Proposal PDF Output */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #171A18 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only-proposal {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .page-break-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      @page {
+        margin: 16mm;
+      }
+    }
