@@ -1,0 +1,13 @@
+{
+  "name": "briefloom-workspace",
+  "version": "2.4.0",
+  "description": "Briefloom — Intelligent Project Scoping & Commercial Proposal Workspace with Node.js REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

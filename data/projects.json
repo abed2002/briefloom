@@ -1,0 +1,92 @@
+{
+  "projects": [
+    {
+      "id": "proj-sample-nordic",
+      "refCode": "BL-2026-SAMPLE",
+      "isSample": true,
+      "name": "Nordic Botanical — Brand Architecture & E-Commerce Flagship",
+      "client": "Nordic Botanical ApS (Sample Project)",
+      "preparedBy": "Briefloom Principal Studio",
+      "category": "Website Design & Development",
+      "status": "Proposal Ready",
+      "timeline": "8 Weeks",
+      "kickoffWindow": "Sprint 01 — Next Monday",
+      "validUntil": "2026-12-15",
+      "currency": "USD",
+      "budgetTarget": 24000,
+      "pricingPreference": "Hybrid Fixed + Hourly",
+      "contingencyPct": 5,
+      "discountPct": 0,
+      "taxPct": 0,
+      "updatedAt": "2026-11-16T01:00:00Z",
+      "description": "SAMPLE DEMONSTRATION PROJECT: Transform Nordic Botanical’s digital flagship with a refined editorial design system, transparent ingredient storytelling, and a streamlined checkout architecture.",
+      "objectives": [
+        "Unify brand storytelling and product discovery within an accessible, Swiss-inspired editorial layout.",
+        "Increase mobile product-page clarity and reduce checkout friction across international currencies.",
+        "Deliver a documented component library so the internal team can launch seasonal campaigns independently."
+      ],
+      "deliverables": [
+        {
+          "id": "sd-1",
+          "phase": "Phase 01: Discovery",
+          "title": "UX Audit, Information Architecture & Wireframes",
+          "description": "Analytics review, customer journey mapping, and interactive wireframes for 8 core views.",
+          "mode": "fixed",
+          "fixedPrice": 4200,
+          "hours": 28,
+          "rate": 150,
+          "optional": false,
+          "included": true
+        },
+        {
+          "id": "sd-2",
+          "phase": "Phase 02: Design",
+          "title": "Editorial Design System & Responsive UI Screens",
+          "description": "Typography scale, color tokens, product card components, and interactive Figma prototypes.",
+          "mode": "fixed",
+          "fixedPrice": 6800,
+          "hours": 42,
+          "rate": 160,
+          "optional": false,
+          "included": true
+        },
+        {
+          "id": "sd-3",
+          "phase": "Phase 03: Engineering",
+          "title": "Frontend Implementation & Storefront Integration",
+          "description": "Clean semantic HTML/CSS/TypeScript engineering, animations, and headless storefront templates.",
+          "mode": "hourly",
+          "fixedPrice": 8000,
+          "hours": 50,
+          "rate": 160,
+          "optional": false,
+          "included": true
+        }
+      ],
+      "milestones": [
+        {
+          "id": "sm-1",
+          "name": "Milestone 01: Discovery & Architecture Sign-off",
+          "week": "Week 2",
+          "description": "Delivery of UX audit and approved interactive wireframes.",
+          "pct": 30
+        },
+        {
+          "id": "sm-2",
+          "name": "Milestone 02: Design System & UI Prototype Approval",
+          "week": "Week 5",
+          "description": "Complete design token library and high-fidelity UI sign-off.",
+          "pct": 40
+        },
+        {
+          "id": "sm-3",
+          "name": "Milestone 03: Production Launch & Team Handover",
+          "week": "Week 8",
+          "description": "Final QA verification, deployment, and documentation delivery.",
+          "pct": 30
+        }
+      ],
+      "notes": "Sample demonstration project seeded in data/projects.json."
+    }
+  ]
+}

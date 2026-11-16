@@ -1,10 +1,43 @@
-# Briefloom
+# Briefloom — Intelligent Project Scoping & Commercial Proposal Workspace
 
-مساحة عمل ذكية لتحويل متطلبات العملاء إلى مشاريع محددة وعروض تجارية واضحة.
+**Tagline:** From first brief to final proposal.
+**Core Value Proposition:** Turn conversations into clear, confident proposals.
 
-## التقنيات
+## Project Structure (Frontend + Node.js Backend API)
 
-- **HTML5:** لبناء الهيكل الكامل للموقع، وصفحاته السبع، وعناصر إمكانية الوصول.
-- **CSS3 وTailwind CSS 3.4.17:** لتطبيق الهوية البصرية، والشبكة الهندسية، والتصميم المتجاوب للجوال وسطح المكتب، وتنسيق الطباعة (`@media print`) لإخراج ملفات PDF نظيفة.
-- **JavaScript (ES6+):** لتشغيل منطق التطبيق بالكامل دون خادم خلفي، بما في ذلك حاسبة التسعير الفورية (الثابت وبالساعة)، وتوزيع دفعات المراحل، والبحث والتصفية، ومنشئ الملخصات، والحفظ المحلي (`localStorage`)، وتصدير واستيراد ملفات JSON وHTML.
-- **SVG وGoogle Fonts:** للأيقونات المتجهة وخطوط الواجهة: `Instrument Serif` و`Inter` و`Plus Jakarta Sans` و`JetBrains Mono`.
+```text
+briefloom/
+├── index.html                  # Frontend application shell
+├── styles.css                  # Custom CSS, responsive styles, and print layout
+├── tailwind.config.js          # Tailwind CSS theme configuration
+├── app.js                      # Frontend application logic
+├── server.js                   # Zero-dependency Node.js HTTP server & REST API router
+├── api/
+│   ├── projectsController.js   # Project CRUD operations & JSON datastore persistence
+│   └── pricingService.js       # Server-side fixed/hourly & milestone calculation engine
+├── data/
+│   └── projects.json           # Persistent JSON datastore (seeded with sample project)
+├── package.json                # Node.js runtime configuration (npm start)
+├── robots.txt                  # Search engine crawler configuration
+└── README.md                   # Documentation, API reference & deployment guide
+```
+
+## Running Full-Stack Locally (Zero External Dependencies)
+1. Open Terminal inside the `briefloom/` directory.
+2. Run:
+   ```bash
+   node server.js
+   ```
+3. Open **http://localhost:3000** in your browser.
+
+## REST API Endpoints
+- `GET /api/health` — Server health check
+- `GET /api/projects` — List all saved projects from `data/projects.json`
+- `POST /api/projects` — Create a new project
+- `GET /api/projects/:id` — Retrieve a project by ID
+- `PUT /api/projects/:id` — Update a project
+- `DELETE /api/projects/:id` — Delete a project
+- `POST /api/proposals/calculate` — Calculate fixed/hourly totals and milestone tranches
+
+## Static Hosting ($0/month)
+The frontend can be deployed to **Cloudflare Pages**, **GitHub Pages**, or **Netlify** and runs offline-first using browser `localStorage`. Static hosting serves the frontend only; the Node.js API requires a Node.js host such as a VPS or application platform.
